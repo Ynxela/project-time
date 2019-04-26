@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id='main' class="main">
+
+        <div class="left-menu">
+           
+            <p class='pre-form'>Добавить активность</p>
+            
+            <form class='input-activity-form' name="addActivity" action="" method="POST">
+
+                <div class="inputs-wrapper">
+                    <input class='input-activity-form-input' type="text" name="startActivity" id='startActivity' placeholder="00:00">
+                    <p> - </p>
+                    <input class='input-activity-form-input' type="text" name="endActivity" id='endActivity' placeholder="00:00">
+                </div>
+
+                <select name="codeActivity" id="codeActivity">
+                    <option value="A6EA19A35">Сон</option>
+                    <option value="A627E9367">Прогулка</option>
+                    <option value="A327E1367">Чтение книги</option>
+                </select>
+                
+                <input class='form-button' type="button" name="submit" value="Добавить" onclick="fillData(document.getElementById('startActivity').value,document.getElementById('endActivity').value,document.getElementById('codeActivity').value)" />
+
+            </form>
+
+        </div>
+
+        <div id='activity-container' class="activity-container">
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
